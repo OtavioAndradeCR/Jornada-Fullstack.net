@@ -1,126 +1,108 @@
-📘 Jornada Fullstack .NET
-📌 Visão Geral
+# Jornada Fullstack .NET
 
-O Jornada Fullstack .NET é um projeto fullstack desenvolvido utilizando a plataforma .NET (C#) com foco em backend (API) e frontend (web). Ele reúne o código da API, da lógica de domínio e da interface de usuário, demonstrando habilidades em desenvolvimento de aplicações completas.
+## 📌 Visão Geral
 
-O projeto apresenta uma solução organizada em camadas com boa separação de responsabilidades, ideal para demonstração técnica em portfólio profissional e para avaliação em processos seletivos.
+O **Jornada Fullstack .NET** é uma aplicação **fullstack desenvolvida em C# com .NET**, composta por uma **API REST**, uma **camada de domínio** e uma **aplicação web**, organizadas em uma única solução. O projeto tem como objetivo demonstrar, de forma prática, a construção de aplicações completas utilizando boas práticas de desenvolvimento backend e integração com frontend.
 
-🎯 Objetivo do Projeto
+Este repositório foi desenvolvido com foco em **portfólio profissional**, evidenciando organização, separação de responsabilidades e domínio da stack .NET.
 
-Construir uma aplicação fullstack com .NET e frontend web.
+---
 
-Expor uma API REST com lógica de negócios.
+## 🎯 Objetivo do Projeto
 
-Demonstrar integração entre backend e frontend.
+* Desenvolver uma aplicação fullstack utilizando .NET
+* Expor uma API REST organizada em camadas
+* Demonstrar integração entre backend e frontend
+* Aplicar boas práticas de código e arquitetura
+* Servir como projeto demonstrativo para recrutadores
 
-Mostrar organização de projeto profissional em camadas e pastas.
+---
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-✔ C# / .NET
-✔ ASP.NET Core (Web API)
-✔ Entity Framework Core
-✔ MVC / Padrões de projeto
-✔ Frontend Web (HTML, CSS, JavaScript)
-✔ Arquitetura em camadas
-✔ Maven/CLI .NET (dotnet CLI)
+* **C#**
+* **.NET / ASP.NET Core**
+* **Web API REST**
+* **Entity Framework Core**
+* **Arquitetura em Camadas**
+* **Frontend Web (HTML, CSS, JavaScript)**
+* **Git / GitHub**
 
-O projeto traz backend e frontend no mesmo repositório organizados por pastas (Fina.Api, Fina.Core, Fina.Web).
+---
 
-🧱 Estrutura do Projeto
+## 🧱 Arquitetura
 
-O repositório está organizado da seguinte forma:
+O projeto está organizado seguindo o padrão de **arquitetura em camadas**, separando claramente as responsabilidades:
 
-📦 Jornada-Fullstack.net
- ┣ 📂 Fina.Api      → Projeto de API REST (backend)
- ┣ 📂 Fina.Core     → Lógica de domínio / classes de negócio
- ┣ 📂 Fina.Web      → Aplicação frontend (web)
- ┣ 📜 Fina.sln      → Solução .NET completa
- ┣ 📜 .gitignore
+* **Fina.Api** – Camada de apresentação (API REST)
+* **Fina.Core** – Domínio e regras de negócio
+* **Fina.Web** – Camada de interface web
 
+Essa abordagem facilita a manutenção, evolução e entendimento do código.
 
-Essa estrutura permite isolar:
+---
 
-Backend (API)
+## ▶️ Como Executar o Projeto
 
-Lógica de negócios
+### Pré-requisitos
 
-Frontend web
+* .NET SDK 6.0 ou superior
+* Visual Studio ou VS Code
 
-▶️ Como Executar o Projeto
-Requisitos
+### Passos
 
-Antes de começar, você vai precisar ter instalado:
-
-✔ .NET SDK 6.0 ou superior
-✔ Um editor/IDE como Visual Studio ou VS Code
-✔ (Opcional) Postman para testar API
-
-Passos
-
-Clone o repositório
-
+```bash
+# Clonar o repositório
 git clone https://github.com/OtavioAndradeCR/Jornada-Fullstack.net.git
 
+# Acessar a pasta do projeto
+cd Jornada-Fullstack.net
 
-Abra a solução
-
-No Visual Studio: abra o arquivo Fina.sln
-
-No VS Code: abra a pasta raiz
-
-Restaure dependências e compile
-
+# Restaurar dependências
 dotnet restore
-dotnet build
 
-
-Execute a API
-
+# Executar a API
 cd Fina.Api
 dotnet run
+```
 
+A aplicação será iniciada localmente conforme configuração padrão do ASP.NET Core.
 
-Execute o frontend
+---
 
-cd Fina.Web
-# Se for projeto estático, abra no navegador
-# Se houver build de frontend, siga instruções internas
+## 📡 Endpoints Principais
 
-📡 Endpoints Principais (Exemplo)
+```
+GET    /api/[controller]
+GET    /api/[controller]/{id}
+POST   /api/[controller]
+PUT    /api/[controller]/{id}
+DELETE /api/[controller]/{id}
+```
 
-Estes exemplos são genéricos — adapte conforme os controllers do projeto.
+---
 
-✔️ Listar itens
+## 🧪 Exemplos de Uso (curl)
 
-GET /api/[controller]
+```bash
+curl http://localhost:5000/api/exemplo
+```
 
+---
 
-✔️ Buscar item por ID
+## 🧩 Diferenciais Técnicos
 
-GET /api/[controller]/{id}
+* Separação clara entre API, domínio e frontend
+* Organização profissional da solução .NET
+* Estrutura preparada para crescimento e novas funcionalidades
+* Código limpo e de fácil entendimento
 
+---
 
-✔️ Criar novo item
+## 📈 Possíveis Evoluções
 
-POST /api/[controller]
-
-🧪 Exemplos de Uso (curl)
-curl http://localhost:5000/api/Items
-
-curl http://localhost:5000/api/Items/1
-
-🧩 Diferenciais Técnicos
-
-✔ Organização por camadas (Domain / API / Web)
-✔ Uso de ASP.NET Core para API
-✔ Possível integração com Entity Framework e persistência
-✔ Código limpo e estruturado para escala e manutenção
-
-📈 Possíveis Evoluções
-
-✔ Autenticação (JWT / Identity)
-✔ Paginação e filtros
-✔ Testes automatizados (unit / integration)
-✔ Deploy em nuvem (Azure / AWS / Railway)
-✔ Documentação OpenAPI / Swagger
+* Autenticação e autorização (JWT / Identity)
+* Implementação de testes automatizados
+* Integração com banco de dados relacional
+* Deploy em ambiente de nuvem (Azure)
+* Documentação com Swagger / OpenAPI
